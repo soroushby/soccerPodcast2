@@ -1,0 +1,96 @@
+.main {
+  //background-image: url(../../assets/thomas-serer-r-xKieMqL34-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-color: black;
+  background-size: cover;
+  min-height: 100vh;
+  //position: relative;
+
+  &-btn:link,
+  &-btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 100px 5px 100px 5px;
+    transition: all 0.9s;
+    letter-spacing: 0.8rem;
+    position: relative;
+  }
+
+  &-btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+
+  &-btn:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  &-btn-white {
+    background-color: rgba(26, 202, 79, 0.623);
+    color: white;
+  }
+
+  &-btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px 5px 100px 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &-btn-white::after {
+    background-color: rgba(26, 202, 79, 0.623);
+  }
+
+  &-btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+
+  &-btn {
+    font-size: 1.5rem;
+    font-weight: 200;
+  }
+}
+
+h1 {
+  color: white;
+}
+
+.heading-primary {
+  color: rgba(255, 255, 255, 0.9);
+
+  animation-name: moveOnTop;
+  animation-duration: 1s;
+  backface-visibility: hidden;
+  //margin-bottom: 4rem;
+}
+
+// .heading-primary-main {
+//   font-size: 8rem;
+//   font-weight: 900;
+//   letter-spacing: 1.5rem;
+// }
+
+@keyframes moveOnTop {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  60% {
+    opacity: 0.5;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

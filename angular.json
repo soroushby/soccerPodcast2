@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "soccerPodcast2"
+    }
+  },
+  "defaultProject": "soccerPodcast2",
+  "cli": {
+    "analytics": false
+  }
 }
