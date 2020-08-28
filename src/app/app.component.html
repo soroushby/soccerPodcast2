@@ -15,6 +15,22 @@
         class="matlist"
         >Home
       </mat-list-item>
+      <mat-list-item
+        role="listitem"
+        fxLayoutAlign="center center"
+        routerLink="/episodes/addepisodes"
+        (click)="sidenav.close()"
+        class="matlist"
+        >Add Episode
+      </mat-list-item>
+      <mat-list-item
+        role="listitem"
+        fxLayoutAlign="center center"
+        routerLink="/episodes/loadepisodes"
+        (click)="sidenav.close()"
+        class="matlist"
+        >Episodes
+      </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -38,6 +54,25 @@
               fxLayoutAlign="center center"
               >Home<mat-icon class="nav-list__item-icon">home</mat-icon></a
             >
+          </li>
+          <li class="nav-list__item">
+            <a
+              routerLink="/episodes/addepisodes"
+              routerLinkActive="active"
+              fxLayoutAlign="center center"
+              >Add Episode<mat-icon class="nav-list__item-icon"
+                ><img src="../assets/video_call-white-18dp.svg"
+              /></mat-icon>
+            </a>
+          </li>
+          <li class="nav-list__item">
+            <a
+              routerLink="/episodes/loadepisodes"
+              routerLinkActive="active"
+              fxLayoutAlign="center center"
+              >Episodes<mat-icon class="nav-list__item-icon"
+                ><img src="../assets/video_library-white-18dp.svg" /></mat-icon
+            ></a>
           </li>
         </ul>
       </div>

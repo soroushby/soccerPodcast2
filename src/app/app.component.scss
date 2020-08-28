@@ -4,56 +4,56 @@ mat-sidenav-content {
   height: 100%;
 }
 
-// .nav {
-//   &-list {
-//     &__item {
-//       list-style: none;
-//       font-size: 2rem;
-//       list-style: none;
+.nav {
+  &-list {
+    &__item {
+      list-style: none;
+      font-size: 2rem;
+      //list-style: none;
 
-//       a {
-//         color: white;
-//         text-decoration: none;
-//       }
+      a {
+        color: white;
+        text-decoration: none;
+      }
 
-//       a:hover {
-//         color: rgba(0, 0, 0, 0.938);
-//       }
-//       &-icon {
-//         margin-left: 0.5rem;
-//       }
-//     }
-//   }
-// }
+      a:hover {
+        color: rgba(0, 0, 0, 0.938);
+      }
+      &-icon {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
 
-// .res {
-//   position: absolute;
-//   background-color: transparent;
-//   z-index: 20;
-// }
+.res {
+  position: absolute;
+  background-color: transparent;
+  z-index: 20;
+}
 
-// .sidenav {
-//   width: 20rem;
-//   background: rgba(0, 0, 0, 0.815);
-// }
+.sidenav {
+  width: 20rem;
+  background: rgba(0, 0, 0, 0.815);
+}
 
-// .active {
-//   border-bottom: 1px white solid;
-// }
+.active {
+  border-bottom: 1px white solid;
+}
 
-// .matlist {
-//   color: white;
-// }
+.matlist {
+  color: white;
+}
 
-// .auth {
-//   cursor: pointer;
-//   list-style: none;
-//   text-decoration: none;
-// }
+.auth {
+  cursor: pointer;
+  list-style: none;
+  text-decoration: none;
+}
 
-// .logo {
-//   // background-image: url(../assets/Untitled.png);
-//   // background-size: 100% 100%;
-//   height: 6rem;
-//   width: 6rem;
-// }
+.logo {
+  // background-image: url(../assets/Untitled.png);
+  // background-size: 100% 100%;
+  height: 6rem;
+  width: 6rem;
+}

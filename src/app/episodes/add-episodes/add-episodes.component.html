@@ -1,0 +1,13 @@
+<form [formGroup]="episodeForm" fxLayoutAlign="center center">
+  <div class="form-wraper" fxLayout="column">
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" placeholder="Enter your name" />
+    </mat-form-field>
+    <button mat-raised-button [routerLink]="['/episodes/loadepisodes']">
+      submit
+    </button>
+  </div>
+</form>
+
+{{ episodeForm.value | json }} -->
