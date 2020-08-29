@@ -1,4 +1,4 @@
-<div
+<!-- <div
   class="main2"
   fxLayout="row wrap"
   fxLayoutAlign="space-evenly center"
@@ -7,4 +7,13 @@
   <ng-container *ngFor="let episode of episodesDatas">
     <app-episode-content [episode]="episode"></app-episode-content>
   </ng-container>
+</div> -->
+<div class="main" fxLayoutAlign="center center">
+  <ag-grid-angular
+    class="ag-theme-alpine myGrid"
+    [rowData]="episodesData$ | async"
+    [columnDefs]="columnDefs"
+    (gridReady)="onGridReady($event)"
+  >
+  </ag-grid-angular>
 </div>

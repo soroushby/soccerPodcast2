@@ -9,7 +9,8 @@ import { EpisodeContentComponent } from './episode-content/episode-content.compo
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../modules/material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { GridModule } from '@progress/kendo-angular-grid';
+import { AgGridModule } from 'ag-grid-angular';
 @NgModule({
   declarations: [
     EpisodesComponent,
@@ -23,6 +24,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ReactiveFormsModule,
     MaterialModule,
     FlexLayoutModule,
+    GridModule,
+    AgGridModule.withComponents([]),
   ],
 })
 export class EpisodesModule {}

@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from 'src/environments/environment';
+import { GridModule } from '@progress/kendo-angular-grid';
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -23,6 +25,8 @@ import { environment } from 'src/environments/environment';
     BrowserAnimationsModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    GridModule,
+    AgGridModule.withComponents([]),
   ],
   providers: [],
   bootstrap: [AppComponent],
