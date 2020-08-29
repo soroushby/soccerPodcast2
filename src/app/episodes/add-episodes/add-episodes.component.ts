@@ -21,15 +21,15 @@ export class AddEpisodesComponent implements OnInit {
       instagram: ['', Validators.required],
     });
   }
-  // onAddEpisodes() {
-  //   this.dataService.postEpisodes(
-  //     this.episodeForm.get('name').value,
-  //     this.episodeForm.get('date').value,
-  //     this.episodeForm.get('topic').value,
-  //     this.episodeForm.get('duration').value,
-  //     this.episodeForm.get('guests').value,
-  //     this.episodeForm.get('soundCloud').value,
-  //     this.episodeForm.get('instagram').value
-  //   );
-  // }
+  onAddEpisodes() {
+    this.dataService.postEpisodes(
+      this.episodeForm.get('name').value,
+      this.episodeForm.get('date').value,
+      this.episodeForm.get('topic').value,
+      this.episodeForm.get('duration').value,
+      this.episodeForm.get('guests').value,
+      this.episodeForm.get('soundCloud').value,
+      this.episodeForm.get('instagram').value
+    );
+  }
 }

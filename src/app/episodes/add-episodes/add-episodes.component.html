@@ -1,13 +1,75 @@
-<form [formGroup]="episodeForm" fxLayoutAlign="center center">
-  <div class="form-wraper" fxLayout="column">
-    <mat-form-field class="example-full-width">
-      <mat-label>Name</mat-label>
-      <input matInput formControlName="name" placeholder="Enter your name" />
-    </mat-form-field>
-    <button mat-raised-button [routerLink]="['/episodes/loadepisodes']">
-      submit
-    </button>
-  </div>
-</form>
-
-{{ episodeForm.value | json }} -->
+<div class="form" fxLayoutAlign="start center">
+  <mat-card class="card">
+    <form [formGroup]="episodeForm">
+      <div class="form-wraper" fxLayout="column">
+        <mat-form-field class="example-full-width">
+          <mat-label>Name</mat-label>
+          <input
+            matInput
+            formControlName="name"
+            placeholder="Enter your name"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Topic</mat-label>
+          <input
+            matInput
+            formControlName="topic"
+            placeholder="Enter your Topic"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Duration</mat-label>
+          <input
+            matInput
+            formControlName="duration"
+            placeholder="Enter episode duration"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Guests</mat-label>
+          <input
+            matInput
+            formControlName="guests"
+            placeholder="Enter your Guests"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Sound cloud</mat-label>
+          <input
+            matInput
+            formControlName="soundCloud"
+            placeholder="Enter your sound cloud link"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Instagram</mat-label>
+          <input
+            matInput
+            formControlName="instagram"
+            placeholder="Enter your Instagram link"
+          />
+        </mat-form-field>
+        <mat-form-field color="accent" appearance="fill">
+          <mat-label>Pick your Episode date</mat-label>
+          <input formControlName="date" matInput [matDatepicker]="picker1" />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker1"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+        <button
+          fxFlexAlign="START"
+          class="submit-button"
+          mat-raised-button
+          (click)="onAddEpisodes()"
+          [routerLink]="['/episodes/loadepisodes']"
+        >
+          SUBMIT
+        </button>
+      </div>
+    </form>
+  </mat-card>
+</div>
+<!-- {{ episodeForm.value | json }} -->

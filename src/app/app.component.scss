@@ -17,7 +17,7 @@ mat-sidenav-content {
       }
 
       a:hover {
-        color: rgba(0, 0, 0, 0.938);
+        color: rgba(34, 230, 34, 0.89);
       }
       &-icon {
         margin-left: 0.5rem;
@@ -43,6 +43,10 @@ mat-sidenav-content {
 
 .matlist {
   color: white;
+}
+
+.matlist:hover {
+  color: rgba(34, 230, 34, 0.89);
 }
 
 .auth {

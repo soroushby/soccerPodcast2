@@ -1,3 +1,21 @@
-form {
-  font-size: 3rem;
+.form {
+  background-image: url(../../../assets/back.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.card {
+  width: 47rem;
+  font-size: 2rem;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.submit-button {
+  width: 20rem;
+  background-color: rgb(82, 82, 82);
+  // border-radius: 1rem;
+  margin-top: 2rem;
 }

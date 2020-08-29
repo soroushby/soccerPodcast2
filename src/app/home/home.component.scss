@@ -1,24 +1,24 @@
 .main {
-  //background-image: url(../../assets/thomas-serer-r-xKieMqL34-unsplash.jpg);
-  // background-repeat: no-repeat;
-  // background-color: black;
-  // background-size: cover;
+  background-image: url(../../assets/77.jpg);
+  background-repeat: no-repeat;
+  //background-color: black;
+  background-position: center;
+  background-size: cover;
   min-height: 100vh;
   position: relative;
 
-  &-bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    z-index: -1;
+  // &-bg-video {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   height: 100%;
+  //   z-index: -1;
 
-    &__content {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
+  //   &__content {
+  //     height: 100%;
+  //     width: 100%;
+  //     object-fit: cover;
+  //   }
 
   &-btn:link,
   &-btn:visited {
