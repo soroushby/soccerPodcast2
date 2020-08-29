@@ -1,0 +1,48 @@
+.main2 {
+  background-image: black;
+  // background-repeat: repeat;
+  // background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  background-size: contain;
+
+  &-card {
+    width: 60rem;
+    min-height: 40rem;
+    margin-top: 10rem;
+
+    background-color: #f7f7f7e8;
+
+    transition: all 0.5s;
+    // background-image: linear-gradient(
+    //   to bottom right,
+    //   #f7f7f7,
+    //   rgba(38, 38, 252, 0.562)
+    // );
+
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    &:hover {
+      transform: scale(1.02);
+    }
+    &__content {
+      font-size: 2rem;
+      text-align: center;
+      line-height: 3rem;
+    }
+
+    // &-content {
+    //   font-size: 3rem;
+
+    //   font-weight: 500;
+    //   letter-spacing: 0.1rem;
+    // }
+  }
+
+  &-icon {
+    width: 6rem;
+    height: 6rem;
+  }
+}

@@ -13,23 +13,49 @@
         routerLink="/home"
         (click)="sidenav.close()"
         class="matlist"
-        >Home
+        >HOME
       </mat-list-item>
-      <mat-list-item
-        role="listitem"
-        fxLayoutAlign="center center"
-        routerLink="/episodes/addepisodes"
-        (click)="sidenav.close()"
-        class="matlist"
-        >Add Episode
-      </mat-list-item>
+      <ng-container *ngIf="auth.userProfile$ | async as profile">
+        <mat-list-item
+          role="listitem"
+          *ngIf="profile.email == 'sorosh.bayanati@gmail.com'"
+          fxLayoutAlign="center center"
+          routerLink="/episodes/addepisodes"
+          (click)="sidenav.close()"
+          class="matlist"
+          >ADD EPISODE
+        </mat-list-item>
+      </ng-container>
       <mat-list-item
         role="listitem"
         fxLayoutAlign="center center"
         routerLink="/episodes/loadepisodes"
         (click)="sidenav.close()"
         class="matlist"
-        >Episodes
+        >EPISODES
+      </mat-list-item>
+      <mat-list-item
+        role="listitem"
+        fxLayoutAlign="center center"
+        (click)="sidenav.close()"
+        class="matlist"
+        *ngIf="!auth.loggedIn"
+      >
+        <a class="auth" (click)="auth.login()" fxLayoutAlign="center center"
+          >LOGIN
+        </a>
+      </mat-list-item>
+
+      <mat-list-item
+        role="listitem"
+        fxLayoutAlign="center center"
+        (click)="sidenav.close()"
+        class="matlist"
+        *ngIf="auth.loggedIn"
+      >
+        <a class="auth" (click)="auth.logout()" fxLayoutAlign="center center"
+          >LOG OUT
+        </a>
       </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
@@ -52,28 +78,49 @@
               routerLink="/home"
               routerLinkActive="active"
               fxLayoutAlign="center center"
-              >Home<mat-icon class="nav-list__item-icon">home</mat-icon></a
+              >HOME<mat-icon class="nav-list__item-icon">home</mat-icon></a
             >
           </li>
-          <li class="nav-list__item">
-            <a
-              routerLink="/episodes/addepisodes"
-              routerLinkActive="active"
-              fxLayoutAlign="center center"
-              >Add Episode<mat-icon class="nav-list__item-icon">
-                video_call</mat-icon
-              >
-            </a>
-          </li>
+          <ng-container *ngIf="auth.userProfile$ | async as profile">
+            <li
+              class="nav-list__item"
+              *ngIf="profile.email == 'sorosh.bayanati@gmail.com'"
+            >
+              <a
+                routerLink="/episodes/addepisodes"
+                routerLinkActive="active"
+                fxLayoutAlign="center center"
+                >ADD EPISODE<mat-icon class="nav-list__item-icon">
+                  video_call</mat-icon
+                >
+              </a>
+            </li>
+          </ng-container>
           <li class="nav-list__item">
             <a
               routerLink="/episodes/loadepisodes"
               routerLinkActive="active"
               fxLayoutAlign="center center"
-              >Episodes<mat-icon class="nav-list__item-icon"
+              >EPISODES<mat-icon class="nav-list__item-icon"
                 >video_library</mat-icon
               ></a
             >
+          </li>
+          <li class="nav-list__item" *ngIf="!auth.loggedIn">
+            <a class="auth" (click)="auth.login()" fxLayoutAlign="center center"
+              >LOGIN<mat-icon class="nav-list__item-icon">exit_to_app</mat-icon>
+            </a>
+          </li>
+
+          <li class="nav-list__item" *ngIf="auth.loggedIn">
+            <a
+              class="auth"
+              (click)="auth.logout()"
+              fxLayoutAlign="center center"
+              >LOG OUT<mat-icon class="nav-list__item-icon"
+                >emoji_people</mat-icon
+              >
+            </a>
           </li>
         </ul>
       </div>
