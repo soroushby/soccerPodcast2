@@ -108,3 +108,20 @@ h1 {
     transform: translate(0);
   }
 }
+
+.card {
+  //margin-left: 5rem;
+  width: 100%;
+  //font-size: 2rem;
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+p {
+  color: white;
+}
+
+mat-card-title {
+  color: white;
+}

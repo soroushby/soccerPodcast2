@@ -1,21 +1,32 @@
 .form {
-  background-image: url(../../../assets/back.jpg);
+  background-image: url(../../../assets/clement-falize-UzZhBohuFXo-unsplash.jpg);
   background-repeat: no-repeat;
-  background-position: top;
+  //background-position: top;
+  //background-color: rgb(177, 177, 177);
   background-size: cover;
   min-height: 100vh;
 }
 
 .card {
-  width: 47rem;
-  font-size: 2rem;
-  background-color: transparent;
+  //margin-left: 5rem;
+  width: 40rem;
+  font-size: 1.5rem;
+  background-color: rgba(250, 99, 40, 0.726);
   box-shadow: none;
+  border-radius: 0;
 }
 
 .submit-button {
   width: 20rem;
-  background-color: rgb(82, 82, 82);
+  background-color: rgba(250, 99, 40, 0.788);
   // border-radius: 1rem;
   margin-top: 2rem;
+}
+
+mat-label {
+  color: white;
+}
+
+button {
+  color: white;
 }

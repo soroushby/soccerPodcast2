@@ -38,4 +38,8 @@ export class DataService {
         )
       );
   }
+
+  deleteEpisodes(id) {
+    return this.db.collection('episodes').doc(id).delete();
+  }
 }

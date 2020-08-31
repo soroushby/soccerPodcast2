@@ -1,3 +1,4 @@
+import { EpisodeContentComponent } from './episode-content/episode-content.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -9,6 +10,7 @@ const routes: Routes = [
   { path: '', component: EpisodesComponent },
   { path: 'addepisodes', component: AddEpisodesComponent },
   { path: 'loadepisodes', component: LoadEpisodesComponent },
+  { path: 'episodecontent', component: EpisodeContentComponent },
 ];
 
 @NgModule({

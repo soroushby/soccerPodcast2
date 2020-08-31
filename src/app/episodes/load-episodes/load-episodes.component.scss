@@ -52,11 +52,30 @@
   min-height: 100vh;
   z-index: 2;
 
-  background-color: aqua;
+  background-color: black;
 }
 
 .myGrid {
-  height: 90rem;
+  height: 60rem;
   width: 100%;
   margin-top: 6rem;
+  font-size: 2rem;
+}
+
+.row-class {
+  background-color: red !important;
+  font-size: 10rem !important;
+}
+.main {
+  min-height: 100vh;
+  &-card {
+    width: 65rem;
+    height: 89rem;
+    &__frame {
+      display: block;
+    }
+  }
+}
+iframe {
+  display: inline-block !important;
 }

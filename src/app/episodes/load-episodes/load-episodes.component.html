@@ -8,12 +8,41 @@
     <app-episode-content [episode]="episode"></app-episode-content>
   </ng-container>
 </div> -->
-<div class="main" fxLayoutAlign="center center">
+<div class="main" fxLayoutAlign="center center" fxLayout="column">
   <ag-grid-angular
     class="ag-theme-alpine myGrid"
     [rowData]="episodesData$ | async"
     [columnDefs]="columnDefs"
     (gridReady)="onGridReady($event)"
+    (selectionChanged)="onSelctionChanged()"
+    (selectionChanged)="onShowVideo()"
+    rowSelection="multiple"
   >
   </ag-grid-angular>
+  <ng-container *ngIf="selection | async as selectedRow">
+    <button
+      mat-raised-button
+      (click)="onDeleteEpisode(selectedRow)"
+      color="warn"
+    >
+      delete selected row
+    </button>
+  </ng-container>
+  <div class="main" fxLayoutAlign="center center">
+    <mat-card
+      class="main-card"
+      *ngIf="video | async as instagramVideo"
+      fxLayoutAlign="center center"
+    >
+      <iframe
+        fxHide.gt-md
+        fxHide.md
+        width="640"
+        height="880"
+        class="main-card__frame"
+        [src]="sendUrl(instagramVideo + 'embed')"
+        frameborder="0"
+      ></iframe>
+    </mat-card>
+  </div>
 </div>
