@@ -13,9 +13,10 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from 'src/environments/environment';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { AgGridModule } from 'ag-grid-angular';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, ProfileComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
