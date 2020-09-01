@@ -6,6 +6,7 @@ import { DataService } from 'src/app/services/data.service';
 import { GridApi } from 'ag-grid-community';
 import * as moment from 'moment';
 import { map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-load-episodes',
@@ -20,6 +21,7 @@ export class LoadEpisodesComponent implements OnInit {
   selection = new BehaviorSubject<string>('');
   video = new BehaviorSubject<string>('');
   constructor(
+    private router: Router,
     private dataService: DataService,
     private sanitizer: DomSanitizer
   ) {}
@@ -64,15 +66,6 @@ export class LoadEpisodesComponent implements OnInit {
         return '<a [routerLink]="episodes/episodecontent/${this.selected}" target="_blank" rel="noopener">Watch video</a>';
       },
     },
-    {
-      headerName: 'Delete',
-      field: 'id',
-      sortable: true,
-      filter: true,
-      cellRenderer: function (params) {
-        return '<button mat-raised-button color="warn" click="deleteEpisode()">delete</button>';
-      },
-    },
   ];
 
   onGridReady({ api }: { api: GridApi }) {
@@ -82,11 +75,14 @@ export class LoadEpisodesComponent implements OnInit {
   }
 
   onSelctionChanged() {
-    const selected = this.gridApi
+    const selectedId = this.gridApi
       .getSelectedRows()
       .map((row) => row.id)
       .join(', ');
-    this.selection.next(selected);
+    // this.selection.next(selected);
+
+    debugger;
+    this.router.navigate(['/episode', selectedId]);
   }
 
   onShowVideo() {

@@ -20,7 +20,7 @@
           role="listitem"
           *ngIf="profile.email == 'sorosh.bayanati@gmail.com'"
           fxLayoutAlign="center center"
-          routerLink="/episodes/addepisodes"
+          routerLink="/addepisodes"
           (click)="sidenav.close()"
           class="matlist"
           >ADD EPISODE
@@ -29,7 +29,7 @@
       <mat-list-item
         role="listitem"
         fxLayoutAlign="center center"
-        routerLink="/episodes/loadepisodes"
+        routerLink="/loadepisodes"
         (click)="sidenav.close()"
         class="matlist"
         >EPISODES
@@ -87,7 +87,7 @@
               *ngIf="profile.email == 'sorosh.bayanati@gmail.com'"
             >
               <a
-                routerLink="/episodes/addepisodes"
+                routerLink="/addepisodes"
                 routerLinkActive="active"
                 fxLayoutAlign="center center"
                 >ADD EPISODE<mat-icon class="nav-list__item-icon">
@@ -98,7 +98,7 @@
           </ng-container>
           <li class="nav-list__item">
             <a
-              routerLink="/episodes/loadepisodes"
+              routerLink="/loadepisodes"
               routerLinkActive="active"
               fxLayoutAlign="center center"
               >EPISODES<mat-icon class="nav-list__item-icon"
@@ -124,6 +124,11 @@
           </li>
         </ul>
       </div>
+
+      <app-profile></app-profile>
+      <a routerLink="/welcome" fxLayoutAlign="center center"
+        ><img class="logo" src="../assets/Untitled.png" />
+      </a>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>

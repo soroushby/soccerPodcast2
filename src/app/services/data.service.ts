@@ -23,6 +23,14 @@ export class DataService {
       instagram: instagram,
     });
   }
+
+  getEpisode(id): Observable<Episodes> {
+    return this.db
+      .doc(`episodes/${id}`)
+      .snapshotChanges()
+      .pipe(map((data) => data.payload.data() as Episodes));
+  }
+
   getEpisodes(): Observable<Episodes[]> {
     return this.db
       .collection('episodes', (data) => data.orderBy('date', 'desc'))

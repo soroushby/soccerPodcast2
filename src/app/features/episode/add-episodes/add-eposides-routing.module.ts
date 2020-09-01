@@ -1,11 +1,11 @@
+import { AddEpisodesComponent } from './add-episodes.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { EpisodesComponent } from './episodes.component';
 
-const routes: Routes = [{ path: '', component: EpisodesComponent }];
+const routes: Routes = [{ path: '', component: AddEpisodesComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class EpisodesRoutingModule {}
+export class AddEpisodesRoutingModule {}

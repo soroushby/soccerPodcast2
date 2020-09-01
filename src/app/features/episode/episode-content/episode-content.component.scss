@@ -1,20 +1,23 @@
-.main2 {
-  // background-image: url();
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  background-color: black;
-
+.main {
+  background-image: url(../../../../assets/emilio-garcia-AWdCgDDedH0-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(46, 216, 46);
   min-height: 100vh;
+}
 
+.main2 {
   &-card {
-    &__res {
-      width: 35rem;
-    }
-    width: 60rem;
+    margin-top: 7rem;
+    width: 50rem;
     min-height: 40rem;
-    margin-top: 10rem;
+    background-color: #f2ff00ce;
+    box-shadow: none;
+    border-radius: 0 8rem 0 8rem;
 
-    background-color: #f7f7f7e8;
+    // width: 60rem;
+    // min-height: 40rem;
+    // margin-top: 10rem;
 
     transition: all 0.5s;
     // background-image: linear-gradient(
@@ -44,8 +47,8 @@
     // }
   }
 
-  &-icon {
-    width: 6rem;
-    height: 6rem;
-  }
+  // &-icon {
+  //   width: 6rem;
+  //   height: 6rem;
+  // }
 }

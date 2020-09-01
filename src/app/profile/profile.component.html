@@ -1,3 +1,10 @@
-<pre *ngIf="auth.userProfile$ | async as profile">
-  <code>{{ profile | json }}</code>
-  </pre>
+<pre
+  fxLayoutAlign="end center"
+  *ngIf="auth.userProfile$ | async as profile"
+  fxLayout="row"
+  fxLayoutGap="2rem"
+>
+  <!-- <code>{{ profile | json }}</code> -->
+  <div class="name">{{ profile.name | lowercase }}</div>
+  <img [src]="profile.picture " class="img" />
+</pre>
