@@ -81,7 +81,6 @@ export class LoadEpisodesComponent implements OnInit {
       .join(', ');
     // this.selection.next(selected);
 
-    debugger;
     this.router.navigate(['/episode', selectedId]);
   }
 
@@ -104,9 +103,5 @@ export class LoadEpisodesComponent implements OnInit {
 
   ngOnInit(): void {
     this.episodesData$ = this.dataService.getEpisodes();
-  }
-
-  onDeleteEpisode(id) {
-    this.dataService.deleteEpisodes(id);
   }
 }

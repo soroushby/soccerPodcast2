@@ -4,6 +4,7 @@ import { Episodes } from 'src/app/interfaces/episodes';
 import { DataService } from 'src/app/services/data.service';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-episode-content',
@@ -18,7 +19,8 @@ export class EpisodeContentComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private dataService: DataService,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    public auth: AuthService
   ) {}
 
   ngOnInit(): void {
@@ -27,7 +29,7 @@ export class EpisodeContentComponent implements OnInit {
   }
 
   onDeleteEpisodes(id) {
-    //return this.dataService.deleteEpisodes(id);
+    return this.dataService.deleteEpisodes(id);
   }
 
   sendUrl(url: string): SafeResourceUrl {

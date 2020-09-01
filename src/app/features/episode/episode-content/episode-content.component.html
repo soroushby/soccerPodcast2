@@ -13,11 +13,6 @@
       >
       <mat-card-subtitle>{{ episodeData.name }}</mat-card-subtitle>
     </mat-card-header>
-    <!-- <img
-          src="../../assets/computer-line.svg"
-          alt="computer icon"
-          class="main2-icon"
-        /> -->
 
     <mat-card-content
       class="main2-card__content"
@@ -49,17 +44,18 @@
       ></iframe> -->
       <div>Guests:&nbsp;{{ episodeData.guests }}</div>
       <a href="{{ episodeData.soundCloud }}">Listen on Sound cloud</a>
-      <!-- <ng-container *ngIf="auth.userProfile$ | async as profile">
-      <button
-        *ngIf="profile.email == 'sorosh.bayanati@gmail.com'"
-        class="submit-button"
-        color="warn"
-        mat-raised-button
-        (click)="onDeleteEpisodes(episode.id)"
-      >
-        delete
-      </button>
-    </ng-container> -->
+
+      <ng-container *ngIf="auth.userProfile$ | async as profile">
+        <button
+          *ngIf="profile.email == 'sorosh.bayanati@gmail.com'"
+          class="submit-button"
+          color="warn"
+          mat-raised-button
+          (click)="onDeleteEpisodes(episodeData.id)"
+        >
+          Delete
+        </button>
+      </ng-container>
     </mat-card-content>
   </mat-card>
 </div>
