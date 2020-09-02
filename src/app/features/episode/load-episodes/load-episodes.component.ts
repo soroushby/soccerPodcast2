@@ -57,15 +57,15 @@ export class LoadEpisodesComponent implements OnInit {
       sortable: true,
       filter: true,
     },
-    {
-      headerName: 'Instagram',
-      field: 'instagram',
-      sortable: true,
-      filter: true,
-      cellRenderer: function (params) {
-        return '<a [routerLink]="episodes/episodecontent/${this.selected}" target="_blank" rel="noopener">Watch video</a>';
-      },
-    },
+    // {
+    //   headerName: 'Instagram',
+    //   field: 'instagram',
+    //   sortable: true,
+    //   filter: true,
+    //   cellRenderer: function (params) {
+    //     return '<a [routerLink]="episodes/episodecontent/${this.selected}" target="_blank" rel="noopener">Watch video</a>';
+    //   },
+    // },
   ];
 
   onGridReady({ api }: { api: GridApi }) {
@@ -93,8 +93,6 @@ export class LoadEpisodesComponent implements OnInit {
   }
 
   sendUrl(url: string): SafeResourceUrl {
-    // const lastChar = url.substr(url.length - 1);
-    // if (url !== '/') url += '/';
     const trustedDashboardUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
       url
     );
