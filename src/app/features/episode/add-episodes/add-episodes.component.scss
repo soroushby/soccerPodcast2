@@ -1,14 +1,12 @@
 .form {
   background-image: url(../../../../assets/clement-falize-UzZhBohuFXo-unsplash.jpg);
   background-repeat: no-repeat;
-  //background-position: top;
-  //background-color: rgb(177, 177, 177);
+  background-position: center;
   background-size: cover;
   min-height: 100vh;
 }
 
 .card {
-  //margin-left: 5rem;
   width: 40rem;
   font-size: 1.5rem;
   background-color: rgba(250, 99, 40, 0.726);
@@ -19,7 +17,6 @@
 .submit-button {
   width: 20rem;
   background-color: rgba(250, 99, 40, 0.788);
-  // border-radius: 1rem;
   margin-top: 2rem;
 }
 

@@ -1,13 +1,3 @@
-<!-- <div
-  class="main2"
-  fxLayout="row wrap"
-  fxLayoutAlign="space-evenly center"
-  *ngIf="episodesData$ | async as episodesDatas"
->
-  <ng-container *ngFor="let episode of episodesDatas">
-    <app-episode-content [episode]="episode"></app-episode-content>
-  </ng-container>
-</div> -->
 <div class="main" fxLayoutAlign="center center" fxLayout="column">
   <ag-grid-angular
     class="ag-theme-material myGrid"
@@ -18,30 +8,4 @@
     rowSelection="multiple"
   >
   </ag-grid-angular>
-  <!-- <ng-container *ngIf="selection | async as selectedRow">
-    <button
-      mat-raised-button
-      (click)="onDeleteEpisode(selectedRow)"
-      color="warn"
-    >
-      delete selected row
-    </button>
-  </ng-container> -->
-  <!-- <div class="main" fxLayoutAlign="center center">
-    <mat-card
-      class="main-card"
-      *ngIf="video | async as instagramVideo"
-      fxLayoutAlign="center center"
-    >
-      <iframe
-        fxHide.gt-md
-        fxHide.md
-        width="640"
-        height="880"
-        class="main-card__frame"
-        [src]="sendUrl(instagramVideo + 'embed')"
-        frameborder="0"
-      ></iframe>
-    </mat-card>
-  </div> -->
 </div>

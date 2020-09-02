@@ -47,6 +47,7 @@
 
       <ng-container *ngIf="auth.userProfile$ | async as profile">
         <button
+          fxFlexAlign="center"
           *ngIf="profile.email == 'sorosh.bayanati@gmail.com'"
           class="submit-button"
           color="warn"
