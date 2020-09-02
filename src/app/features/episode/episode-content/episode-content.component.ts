@@ -14,7 +14,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class EpisodeContentComponent implements OnInit {
   episode: Observable<Episodes>;
 
-  id: any;
+  public id: any;
 
   constructor(
     private route: ActivatedRoute,
