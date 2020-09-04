@@ -42,7 +42,7 @@ mat-sidenav-content {
 }
 
 .matlist {
-  color: white;
+  color: white !important;
 }
 
 .matlist:hover {
@@ -58,4 +58,8 @@ mat-sidenav-content {
 .logo {
   height: 6rem;
   width: 6rem;
+}
+
+.example-icon {
+  color: white;
 }

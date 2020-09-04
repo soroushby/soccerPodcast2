@@ -1,4 +1,4 @@
-<mat-sidenav-container>
+<mat-sidenav-container class="example-container">
   <mat-sidenav class="sidenav" #sidenav>
     <mat-nav-list
       role="list"
@@ -60,11 +60,12 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar class="res" color="primary">
+    <mat-toolbar class="res">
       <button
         fxFlex.lt-md
         (click)="sidenav.toggle()"
         mat-icon-button
+        class="example-icon"
         fxLayoutAlign="start center"
         aria-label="Example icon-button with menu icon"
       >
